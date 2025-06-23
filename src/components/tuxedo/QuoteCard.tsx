@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import Button from "./Button";
 
 export interface TuxedoQuoteCardProps {
   title?: string;
@@ -74,13 +75,12 @@ const QuoteCard = React.forwardRef<HTMLDivElement, TuxedoQuoteCardProps>(
           </p>
 
           {/* CTA Button */}
-          <button
+          <Button
             onClick={onButtonClick}
-            className="flex w-60 h-16 px-6 py-4 items-center gap-2 rounded-xl bg-[#1F1F1F] hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+            size="large"
+            className="w-60 h-16 gap-2 rounded-xl bg-[#1F1F1F] hover:bg-gray-800 text-white font-['Poppins',_-apple-system,_Roboto,_Helvetica,_sans-serif] text-[18px] font-semibold leading-[26px]"
           >
-            <span className="text-white font-['Poppins',_-apple-system,_Roboto,_Helvetica,_sans-serif] text-[18px] font-semibold leading-[26px]">
-              {buttonText}
-            </span>
+            {buttonText}
             {/* Arrow Icon */}
             <svg
               width="18"
@@ -95,7 +95,7 @@ const QuoteCard = React.forwardRef<HTMLDivElement, TuxedoQuoteCardProps>(
                 fill="white"
               />
             </svg>
-          </button>
+          </Button>
         </div>
       </div>
     );
