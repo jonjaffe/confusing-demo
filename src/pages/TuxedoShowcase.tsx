@@ -2,7 +2,14 @@ import { useState } from "react";
 import { Search, ShoppingCart, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button, Input, Card, Badge, Modal } from "@/components/tuxedo";
+import {
+  Button,
+  Input,
+  Card,
+  Badge,
+  Modal,
+  QuoteCard,
+} from "@/components/tuxedo";
 
 const TuxedoShowcase = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -207,6 +214,28 @@ const TuxedoShowcase = () => {
               </Card>
             </div>
           </div>
+
+          {/* Quote Card Section */}
+          <Card variant="outlined" padding="large">
+            <h2 className="text-2xl font-bold text-white mb-6">Quote Card</h2>
+            <div className="space-y-6">
+              <p className="text-brand-gray-light">
+                A specialized card component designed for insurance quotes
+                featuring motor breakdown insurance styling.
+              </p>
+              <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
+                <QuoteCard
+                  onButtonClick={() => alert("Quote button clicked!")}
+                />
+                <QuoteCard
+                  title="Get home insurance quotes for ML18 UOE in seconds"
+                  description="Compare comprehensive home cover options and see your personalized prices"
+                  buttonText="Compare home quotes"
+                  onButtonClick={() => alert("Home quote clicked!")}
+                />
+              </div>
+            </div>
+          </Card>
 
           {/* Modal Section */}
           <Card variant="outlined" padding="large">
