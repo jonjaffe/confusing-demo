@@ -2,14 +2,7 @@ import { useState } from "react";
 import { Search, ShoppingCart, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import {
-  Button,
-  Input,
-  Card,
-  Badge,
-  Modal,
-  QuoteCard,
-} from "@/components/tuxedo";
+import { Button, Input, Card, Badge, Modal } from "@/components/tuxedo";
 
 const TuxedoShowcase = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -215,61 +208,6 @@ const TuxedoShowcase = () => {
             </div>
           </div>
 
-          {/* Quote Cards Section */}
-          <Card variant="outlined" padding="large">
-            <h2 className="text-2xl font-bold text-white mb-6">Quote Cards</h2>
-            <div className="space-y-8">
-              <p className="text-brand-gray-light">
-                Quote cards for displaying insurance quotes with dynamic vehicle
-                registration and customizable content.
-              </p>
-
-              {/* Quote Card Examples */}
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                <QuoteCard
-                  vehicleReg="ML18 UOE"
-                  title="Get breakdown quotes for {vehicleReg} in seconds"
-                  description="Choose from local, nationwide or European cover then see your prices"
-                  buttonText="Get instant quotes"
-                  onButtonClick={() => alert("Quote button clicked!")}
-                />
-
-                <QuoteCard
-                  vehicleReg="AB21 XYZ"
-                  title="Insurance quotes for {vehicleReg}"
-                  description="Compare comprehensive, third party, and fire & theft coverage options"
-                  buttonText="Compare prices"
-                  onButtonClick={() => alert("Compare button clicked!")}
-                />
-
-                <QuoteCard
-                  vehicleReg="CD56 EFG"
-                  title="Protect {vehicleReg} today"
-                  description="Get peace of mind with our comprehensive breakdown cover options"
-                  buttonText="Get protected"
-                  disabled={true}
-                />
-              </div>
-
-              {/* Quote Card Variants */}
-              <div>
-                <h3 className="text-lg font-semibold text-brand-amber mb-4">
-                  Without Icon
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl">
-                  <QuoteCard
-                    vehicleReg="HJ89 KLM"
-                    title="Simple quote for {vehicleReg}"
-                    description="Quick and easy insurance quotes without the icon"
-                    buttonText="Get quote"
-                    showIcon={false}
-                    onButtonClick={() => alert("Simple quote clicked!")}
-                  />
-                </div>
-              </div>
-            </div>
-          </Card>
-
           {/* Modal Section */}
           <Card variant="outlined" padding="large">
             <h2 className="text-2xl font-bold text-white mb-6">Modal</h2>
@@ -343,11 +281,6 @@ const TuxedoShowcase = () => {
                 <li>
                   <strong className="text-brand-amber">Modal</strong> - Dialog
                   and overlay components
-                </li>
-                <li>
-                  <strong className="text-brand-amber">QuoteCard</strong> -
-                  Insurance quote cards with dynamic vehicle registration and
-                  breakdown icons
                 </li>
               </ul>
               <p>
