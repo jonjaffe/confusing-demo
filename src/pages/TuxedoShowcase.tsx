@@ -215,6 +215,64 @@ const TuxedoShowcase = () => {
             </div>
           </div>
 
+          {/* Quote Cards Section */}
+          <Card variant="outlined" padding="large">
+            <h2 className="text-2xl font-bold text-white mb-6">Quote Cards</h2>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-lg font-semibold text-brand-amber mb-4">
+                  Default Quote Card
+                </h3>
+                <QuoteCard />
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-brand-amber mb-4">
+                  Custom Vehicle Registration
+                </h3>
+                <QuoteCard
+                  vehicleReg="AB12 XYZ"
+                  onButtonClick={() => alert("Getting quotes for AB12 XYZ...")}
+                />
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-brand-amber mb-4">
+                  Custom Content
+                </h3>
+                <QuoteCard
+                  vehicleReg="LM19 ABC"
+                  title="Get comprehensive insurance quotes for {vehicleReg}"
+                  description="Compare prices from top insurers and find the best deal for your vehicle"
+                  buttonText="Compare now"
+                  onButtonClick={() => alert("Comparing insurance quotes...")}
+                />
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-brand-amber mb-4">
+                  Without Icon
+                </h3>
+                <QuoteCard
+                  vehicleReg="XX99 ZZZ"
+                  showIcon={false}
+                  onButtonClick={() => alert("No icon version clicked")}
+                />
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-brand-amber mb-4">
+                  Disabled State
+                </h3>
+                <QuoteCard
+                  vehicleReg="DIS 123"
+                  disabled={true}
+                  buttonText="Coming soon"
+                />
+              </div>
+            </div>
+          </Card>
+
           {/* Modal Section */}
           <Card variant="outlined" padding="large">
             <h2 className="text-2xl font-bold text-white mb-6">Modal</h2>
