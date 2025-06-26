@@ -347,6 +347,10 @@ const TuxedoShowcase = () => {
                   <strong className="text-brand-amber">Modal</strong> - Dialog
                   and overlay components
                 </li>
+                <li>
+                  <strong className="text-brand-amber">QuoteCard</strong> -
+                  Insurance quote cards with dynamic vehicle registration
+                </li>
               </ul>
               <p>
                 All components follow the exact design specifications from the
