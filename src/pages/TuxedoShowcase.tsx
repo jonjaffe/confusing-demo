@@ -2,7 +2,14 @@ import { useState } from "react";
 import { Search, ShoppingCart, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button, Input, Card, Badge, Modal } from "@/components/tuxedo";
+import {
+  Button,
+  Input,
+  Card,
+  Badge,
+  Modal,
+  MotorBreakdownQuoteCard,
+} from "@/components/tuxedo";
 
 const TuxedoShowcase = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
