@@ -16,9 +16,13 @@ export type { TuxedoBadgeProps } from "./Badge";
 export { default as Modal } from "./Modal";
 export type { TuxedoModalProps } from "./Modal";
 
+export { default as MotorBreakdownQuoteCard } from "./MotorBreakdownQuoteCard";
+export type { TuxedoMotorBreakdownQuoteCardProps } from "./MotorBreakdownQuoteCard";
+
 // Re-export all components for convenience
 export * from "./Button";
 export * from "./Input";
 export * from "./Card";
 export * from "./Badge";
 export * from "./Modal";
+export * from "./MotorBreakdownQuoteCard";

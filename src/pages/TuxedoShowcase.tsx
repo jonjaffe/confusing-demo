@@ -2,7 +2,14 @@ import { useState } from "react";
 import { Search, ShoppingCart, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button, Input, Card, Badge, Modal } from "@/components/tuxedo";
+import {
+  Button,
+  Input,
+  Card,
+  Badge,
+  Modal,
+  MotorBreakdownQuoteCard,
+} from "@/components/tuxedo";
 
 const TuxedoShowcase = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -250,6 +257,72 @@ const TuxedoShowcase = () => {
             </div>
           </Modal>
 
+          {/* Motor Breakdown Quote Card Section */}
+          <Card variant="outlined" padding="large">
+            <h2 className="text-2xl font-bold text-white mb-6">
+              Motor Breakdown Quote Card
+            </h2>
+            <div className="space-y-6">
+              <p className="text-brand-gray-light">
+                Motor breakdown quote card component that matches the Figma
+                design with responsive layout and interactive elements.
+              </p>
+
+              {/* Default Example */}
+              <div>
+                <h3 className="text-lg font-semibold text-brand-amber mb-4">
+                  Default
+                </h3>
+                <div className="flex justify-start">
+                  <MotorBreakdownQuoteCard />
+                </div>
+              </div>
+
+              {/* Custom Examples */}
+              <div>
+                <h3 className="text-lg font-semibold text-brand-amber mb-4">
+                  Custom Examples
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <MotorBreakdownQuoteCard
+                    vehicleReg="AB12 CDE"
+                    buttonText="Compare Quotes"
+                    onButtonClick={() => alert("Custom button clicked!")}
+                  />
+                  <MotorBreakdownQuoteCard
+                    vehicleReg="XY99 ZAB"
+                    title="Get breakdown quotes for XY99 ZAB today"
+                    description="Comprehensive coverage options available with instant pricing"
+                    buttonText="View Options"
+                    showIcon={false}
+                  />
+                  <MotorBreakdownQuoteCard
+                    vehicleReg="TEST 123"
+                    buttonText="Get Quote"
+                    disabled={true}
+                  />
+                </div>
+              </div>
+
+              {/* Features */}
+              <div>
+                <h3 className="text-lg font-semibold text-brand-amber mb-4">
+                  Features
+                </h3>
+                <ul className="list-disc list-inside space-y-2 text-brand-gray-light">
+                  <li>Responsive design that works on all screen sizes</li>
+                  <li>Dynamic vehicle registration replacement in title</li>
+                  <li>Customizable button text and actions</li>
+                  <li>Optional motor breakdown icon display</li>
+                  <li>Disabled state support</li>
+                  <li>Poppins font family for brand consistency</li>
+                  <li>Hover and focus states for accessibility</li>
+                  <li>Perfect pixel match to Figma design</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+
           {/* Summary */}
           <Card variant="outlined" padding="large">
             <h2 className="text-2xl font-bold text-white mb-6">
@@ -281,6 +354,13 @@ const TuxedoShowcase = () => {
                 <li>
                   <strong className="text-brand-amber">Modal</strong> - Dialog
                   and overlay components
+                </li>
+                <li>
+                  <strong className="text-brand-amber">
+                    MotorBreakdownQuoteCard
+                  </strong>{" "}
+                  - Insurance quote card with vehicle registration and breakdown
+                  coverage options
                 </li>
               </ul>
               <p>
