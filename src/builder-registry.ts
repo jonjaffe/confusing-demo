@@ -212,6 +212,59 @@ Builder.registerComponent(Modal, {
   ],
 });
 
+Builder.registerComponent(QuoteCard, {
+  name: "Tuxedo Quote Card",
+  inputs: [
+    {
+      name: "vehicleReg",
+      type: "string",
+      defaultValue: "ML18 UOE",
+      helperText: "Vehicle registration number to display in the title",
+    },
+    {
+      name: "title",
+      type: "string",
+      defaultValue: "Get breakdown quotes for {vehicleReg} in seconds",
+      helperText:
+        "Main title - use {vehicleReg} placeholder for dynamic replacement",
+    },
+    {
+      name: "description",
+      type: "string",
+      defaultValue:
+        "Choose from local, nationwide or European cover then see your prices",
+      helperText: "Description text below the title",
+    },
+    {
+      name: "buttonText",
+      type: "string",
+      defaultValue: "Get instant quotes",
+    },
+    {
+      name: "showIcon",
+      type: "boolean",
+      defaultValue: true,
+      helperText: "Show the motor breakdown icon",
+    },
+    {
+      name: "disabled",
+      type: "boolean",
+      defaultValue: false,
+      helperText: "Disable the button interaction",
+    },
+    {
+      name: "className",
+      type: "string",
+      defaultValue: "",
+    },
+    {
+      name: "onButtonClick",
+      type: "action",
+      defaultValue: "() => {}",
+    },
+  ],
+});
+
 // Register HeroSection component with dynamic inputs
 Builder.registerComponent(HeroSection, {
   name: "Hero Section",
