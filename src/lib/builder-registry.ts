@@ -122,3 +122,47 @@ Builder.registerComponent(Modal, {
     },
   ],
 });
+
+Builder.registerComponent(MotorBreakdownQuoteCard, {
+  name: "Tuxedo Motor Breakdown Quote Card",
+  inputs: [
+    {
+      name: "vehicleReg",
+      type: "string",
+      defaultValue: "ML18 UOE",
+      helperText: "Vehicle registration number to display in the title",
+    },
+    {
+      name: "title",
+      type: "string",
+      defaultValue: "",
+      helperText:
+        "Custom title (if empty, will use vehicle reg in default format)",
+    },
+    {
+      name: "description",
+      type: "string",
+      defaultValue:
+        "Choose from local, nationwide or European cover then see your prices",
+      helperText: "Description text below the title",
+    },
+    {
+      name: "buttonText",
+      type: "string",
+      defaultValue: "Get instant quotes",
+      helperText: "Text to display on the action button",
+    },
+    {
+      name: "showIcon",
+      type: "boolean",
+      defaultValue: true,
+      helperText: "Whether to show the motor breakdown icon",
+    },
+    {
+      name: "disabled",
+      type: "boolean",
+      defaultValue: false,
+      helperText: "Whether the button should be disabled",
+    },
+  ],
+});
