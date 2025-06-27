@@ -92,16 +92,6 @@ export default {
           "Arial",
           "sans-serif",
         ],
-        poppins: [
-          "Poppins",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
-          "sans-serif",
-        ],
       },
       keyframes: {
         "accordion-down": {
