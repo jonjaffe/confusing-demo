@@ -461,3 +461,4 @@ Builder.registerComponent(FeaturesSection, {
 Builder.registerComponent(WelcomeBanner, {
   name: 'Welcome Banner'
 }); 
+

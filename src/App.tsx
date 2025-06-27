@@ -12,6 +12,7 @@ import Account from "./pages/Account";
 import TuxedoShowcase from "./pages/TuxedoShowcase";
 import BusinessInsurance from "./pages/BusinessInsurance";
 import BuilderPage from "./builder-page";
+import EditSymbol from "./pages/EditSymbol";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/tuxedo" element={<TuxedoShowcase />} />
           <Route path="/business-insurance" element={<BusinessInsurance />} />
           <Route path="/builder-demo" element={<BuilderPage />} />
+          <Route path="/edit-symbol" element={<EditSymbol />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
