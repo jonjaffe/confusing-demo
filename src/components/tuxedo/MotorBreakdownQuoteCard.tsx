@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-interface MotorBreakdownQuoteCardProps {
+export interface MotorBreakdownQuoteCardProps {
   vehicleReg?: string;
   title?: string;
   description?: string;
