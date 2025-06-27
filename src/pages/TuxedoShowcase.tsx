@@ -2,7 +2,14 @@ import { useState } from "react";
 import { Search, ShoppingCart, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button, Input, Card, Badge, Modal } from "@/components/tuxedo";
+import {
+  Button,
+  Input,
+  Card,
+  Badge,
+  Modal,
+  MotorBreakdownQuoteCard,
+} from "@/components/tuxedo";
 
 const TuxedoShowcase = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -219,6 +226,59 @@ const TuxedoShowcase = () => {
               <Button variant="primary" onClick={() => setIsModalOpen(true)}>
                 Open Modal
               </Button>
+            </div>
+          </Card>
+
+          {/* Motor Breakdown Quote Card Section */}
+          <Card variant="outlined" padding="large">
+            <h2 className="text-2xl font-bold text-white mb-6">
+              Motor Breakdown Quote Card
+            </h2>
+            <div className="space-y-6">
+              <p className="text-brand-gray-light">
+                Insurance quote card components for motor breakdown coverage.
+                Features customizable vehicle registration, descriptions, and
+                action buttons with consistent branding.
+              </p>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                {/* Default */}
+                <MotorBreakdownQuoteCard
+                  onButtonClick={() => console.log("Default card clicked")}
+                />
+
+                {/* Custom Vehicle Registration */}
+                <MotorBreakdownQuoteCard
+                  vehicleReg="AB12 CDE"
+                  onButtonClick={() => console.log("Custom reg card clicked")}
+                />
+
+                {/* Custom Title and Description */}
+                <MotorBreakdownQuoteCard
+                  vehicleReg="XY98 ZAB"
+                  title="Compare breakdown cover options"
+                  description="Find the right level of cover for your vehicle with competitive pricing"
+                  buttonText="Compare quotes"
+                  onButtonClick={() =>
+                    console.log("Custom content card clicked")
+                  }
+                />
+
+                {/* Without Icon */}
+                <MotorBreakdownQuoteCard
+                  vehicleReg="NO12 ICN"
+                  showIcon={false}
+                  onButtonClick={() => console.log("No icon card clicked")}
+                />
+
+                {/* Disabled State */}
+                <MotorBreakdownQuoteCard
+                  vehicleReg="DIS12 BLD"
+                  buttonText="Currently unavailable"
+                  disabled={true}
+                  onButtonClick={() => console.log("Disabled card clicked")}
+                />
+              </div>
             </div>
           </Card>
 
