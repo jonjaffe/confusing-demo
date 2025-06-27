@@ -2,14 +2,7 @@ import { useState } from "react";
 import { Search, ShoppingCart, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import {
-  Button,
-  Input,
-  Card,
-  Badge,
-  Modal,
-  BreakdownQuoteCard,
-} from "@/components/tuxedo";
+import { Button, Input, Card, Badge, Modal } from "@/components/tuxedo";
 
 const TuxedoShowcase = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -215,80 +208,6 @@ const TuxedoShowcase = () => {
             </div>
           </div>
 
-          {/* BreakdownQuoteCard Section */}
-          <Card variant="outlined" padding="large">
-            <h2 className="text-2xl font-bold text-white mb-6">
-              Breakdown Quote Cards
-            </h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-semibold text-brand-amber mb-4">
-                  Default Card
-                </h3>
-                <div className="flex justify-center">
-                  <BreakdownQuoteCard
-                    onButtonClick={() => console.log("Get quotes clicked")}
-                  />
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-brand-amber mb-4">
-                  Custom Vehicle Registration
-                </h3>
-                <div className="flex justify-center">
-                  <BreakdownQuoteCard
-                    vehicleReg="AB123 CD"
-                    onButtonClick={() =>
-                      console.log("Custom vehicle quotes clicked")
-                    }
-                  />
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-brand-amber mb-4">
-                  Without Icon
-                </h3>
-                <div className="flex justify-center">
-                  <BreakdownQuoteCard
-                    showIcon={false}
-                    vehicleReg="XY789 ZW"
-                    onButtonClick={() => console.log("No icon quotes clicked")}
-                  />
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-brand-amber mb-4">
-                  Custom Content
-                </h3>
-                <div className="flex justify-center">
-                  <BreakdownQuoteCard
-                    title="Get motor insurance quotes for your vehicle"
-                    description="Compare comprehensive, third party and third party fire & theft policies"
-                    buttonText="Compare prices"
-                    onButtonClick={() =>
-                      console.log("Insurance quotes clicked")
-                    }
-                  />
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-brand-amber mb-4">
-                  Disabled State
-                </h3>
-                <div className="flex justify-center">
-                  <BreakdownQuoteCard
-                    disabled
-                    onButtonClick={() => console.log("Disabled button clicked")}
-                  />
-                </div>
-              </div>
-            </div>
-          </Card>
-
           {/* Modal Section */}
           <Card variant="outlined" padding="large">
             <h2 className="text-2xl font-bold text-white mb-6">Modal</h2>
@@ -362,13 +281,6 @@ const TuxedoShowcase = () => {
                 <li>
                   <strong className="text-brand-amber">Modal</strong> - Dialog
                   and overlay components
-                </li>
-                <li>
-                  <strong className="text-brand-amber">
-                    BreakdownQuoteCard
-                  </strong>{" "}
-                  - Breakdown quote cards with vehicle registration and pricing
-                  info
                 </li>
               </ul>
               <p>
